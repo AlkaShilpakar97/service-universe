@@ -17,12 +17,12 @@ services:
       timeout: 5s
       retries: 5
 
-  # backend-transport:
-  #   build: ./transport-service
-  #   ports:
-  #     - "5001:5000"  # Host:Container
-  #   depends_on:
-  #     - db
+  backend-transport:
+    build: ./transport-service
+    ports:
+      - "5001:5000"
+    depends_on:
+      - db
 
   backend-doctor:
     build: ./doctor-service
@@ -31,12 +31,12 @@ services:
     depends_on:
       - db
 
-  # backend-school:
-  #   build: ./school-service
-  #   ports:
-  #     - "5003:5000"
-  #   depends_on:
-  #     - db
+  backend-school:
+    build: ./school-service
+    ports:
+      - "5003:5000"
+    depends_on:
+      - db
 
   # gateway:
   #   build: ./gateway-service
