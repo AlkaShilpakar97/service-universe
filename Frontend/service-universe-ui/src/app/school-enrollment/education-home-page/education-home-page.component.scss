@@ -1,0 +1,74 @@
+.school-home-container {
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #6a0dad;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .action-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .action-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .action-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .action-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  
+  .action-card h3 {
+    color: #6a0dad;
+    margin-bottom: 0.5rem;
+  }
+  
+  .action-card p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .action-card button {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .action-card button:hover {
+    background-color: #580b9a;
+  }
+
+  img {
+    width: 770px;
+    height: 250px;
+    margin-bottom: 30px;
+  }
+  

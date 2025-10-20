@@ -1,0 +1,20 @@
+<div class="status-container">
+    <h2>Check Enrollment Status</h2>
+    <p class="subtitle">Track the progress of your school enrollment application</p>
+  
+    <form (ngSubmit)="checkStatus()" [formGroup]="statusForm">
+      <div class="form-group">
+        <label for="applicationId">Application ID</label>
+        <input id="applicationId" type="text" formControlName="applicationId" placeholder="Enter your Application ID" required />
+      </div>
+  
+      <button type="submit" class="status-btn" [disabled]="!statusForm.valid">Check Status</button>
+    </form>
+  
+    <div *ngIf="status" class="status-result">
+      <h3 >Status: <span class="{{statusClass}}">{{ status }}</span></h3>
+    </div>
+
+    <button class="back-btn mt-3" (click)="goBack()">Go Back</button>
+  </div>
+  

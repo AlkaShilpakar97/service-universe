@@ -1,0 +1,40 @@
+<div class="slots-container">
+    <img src="../assets/images/doctor-appointment.jpg" alt="">
+    <h2>Available Appointment Slots</h2>
+    <p class="subtitle">Select a convenient date and time for your consultation</p>
+  
+    <div *ngIf="doctor" class="doctor-info">
+      <h3>{{ doctor.name }} ({{ doctor.specialty }})</h3>
+      <p>Hospital: {{ doctor.hospital }}</p>
+    </div>
+  
+    <div class="calendar">
+      <div class="date-picker">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" [(ngModel)]="selectedDate" (change)="loadSlots()" />
+      </div>
+  
+      <div class="time-slots">
+        <div class="time-slot-header"><h4>Available Time Slots</h4></div>
+        <div *ngFor="let slot of availableSlots" class="slot" [class.booked]="slot.booked">
+          <button [disabled]="slot.booked" (click)="selectSlot(slot.time)">
+            {{ slot.time }}
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <button *ngIf="selectedSlot" (click)="confirmAppointment()" class="book-btn">
+      Book {{ selectedSlot }} on {{ selectedDate }}
+    </button>
+  
+    <div *ngIf="confirmation" class="confirmation">
+      <h3>Appointment Confirmed!</h3>
+      <p>Doctor: {{ doctor.name }}</p>
+      <p>Date: {{ confirmation.appointment_date }}</p>
+      <p>Check your email for confirmation and updates</p>
+    </div>
+
+    <button class="back-btn mt-3" (click)="goBack()">Go Back</button>
+  </div>
+  

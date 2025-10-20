@@ -1,0 +1,138 @@
+.slots-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    color: #6a0dad;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .doctor-info h3 {
+    color: #6a0dad;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    width: 35%;
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .form-group input,
+  .form-group select {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .book-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .book-btn:hover {
+    background-color: #580b9a;
+  }
+  
+  .confirmation {
+    margin-top: 2rem;
+    text-align: center;
+    color: green;
+  }
+  
+  .calendar {
+    margin-top: 2rem;
+  }
+  
+  .date-picker {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .date-picker label {
+    margin-right: 10px;
+  }
+  
+  .time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .slot button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #6a0dad;
+    background-color: #fff;
+    color: #6a0dad;
+    cursor: pointer;
+  }
+  
+  .slot button:hover:not(:disabled) {
+    background-color: #6a0dad;
+    color: #fff;
+  }
+  
+  .slot.booked button {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  .book-btn {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .book-btn:hover {
+    background-color: #580b9a;
+  }
+
+  .time-slot-header {
+    width: 100%;
+  }
+
+  .back-btn {
+    width: 20%;
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 16px;
+  }
+  

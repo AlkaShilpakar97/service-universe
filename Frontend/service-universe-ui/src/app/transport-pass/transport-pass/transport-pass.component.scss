@@ -1,0 +1,80 @@
+.transport-home {
+    text-align: center;
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  
+  h2 {
+    color: #6a0dad;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .divider {
+    border: 0;
+    height: 2px;
+    background-color: #6a0dad;
+    width: 80%;
+    margin: 0 auto 2rem;
+  }
+  
+  .transport-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .option-card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.15);
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 280px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .option-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .option-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .option-card h3 {
+    color: #6a0dad;
+    margin-top: 1rem;
+  }
+  
+  .option-card p {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .option-card button {
+    background-color: #6a0dad;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .option-card button:hover {
+    background-color: #580b9a;
+  }
+  
+  img {
+    height: 350px;
+    width: 600px;
+    margin-bottom: 20px;
+  }

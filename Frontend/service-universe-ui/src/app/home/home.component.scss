@@ -1,0 +1,111 @@
+.signin-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    color: #6a0dad; /* pretty purple */
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #6a0dad;
+    box-shadow: 0 0 5px rgba(106, 13, 173, 0.2);
+  }
+  
+  .signin-btn {
+    width: 100%;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .signin-btn:hover {
+    background-color: #580b9a;
+  }
+  
+  .signup-link {
+    margin-top: 1rem;
+    color: #555;
+  }
+  
+  .signup-link a {
+    color: #6a0dad;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .services {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 60px 0;
+  
+    .service-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+  
+      p {
+        color: #555;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        min-height: 40px; /* keeps cards aligned */
+      }
+    }
+
+    img {
+      width: 250px;
+      height: 220px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+  }

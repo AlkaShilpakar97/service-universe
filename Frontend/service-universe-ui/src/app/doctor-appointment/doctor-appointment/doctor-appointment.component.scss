@@ -1,0 +1,68 @@
+.doctor-search-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    color: #6a0dad;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    width: 25%;
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .form-group input, .form-group select {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .search-btn:hover {
+    background-color: #580b9a;
+  }
+  
+  .doctor-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: left;
+  }
+  
+  .doctor-card h4 {
+    color: #6a0dad;
+    margin-bottom: 0.5rem;
+  }
+  

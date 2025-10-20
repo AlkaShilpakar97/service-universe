@@ -1,0 +1,79 @@
+.status-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    color: #6a0dad;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    width: 40%;
+    font-weight: 500;
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .form-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .status-btn {
+    width: 100%;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .status-btn:hover {
+    background-color: #580b9a;
+  }
+  
+  .status-result {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .status-result .pending { color: orange; }
+  .status-result .review { color: #ff9900; }
+  .status-result .accepted { color: green; }
+  .status-result .rejected { color: red; }
+
+  .back-btn {
+    width: 20%;
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 24px;
+  }
+  

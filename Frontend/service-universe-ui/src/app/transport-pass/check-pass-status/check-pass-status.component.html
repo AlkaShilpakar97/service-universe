@@ -1,0 +1,39 @@
+<div class="check-status-container">
+    <h2>Check Transport Pass Status</h2>
+    <p>Enter your application ID or email to track your pass status.</p>
+  
+    <form [formGroup]="statusForm" (ngSubmit)="onSubmit()" class="status-form">
+      <div class="form-group">
+        <label for="appId">Application ID</label>
+        <input
+          id="appId"
+          type="text"
+          formControlName="appId"
+          placeholder="Enter your Application ID"
+        />
+      </div>
+  
+      <div class="or-divider">OR</div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="Enter your Email"
+        />
+      </div>
+  
+      <button type="submit" [disabled]="statusForm.invalid">Check Status</button>
+    </form>
+  
+    <div *ngIf="statusResult" class="status-result">
+      <h3>Application Status</h3>
+      <p><strong>Status:</strong> {{ statusResult.status }}</p>
+      <p><strong>Remarks:</strong> {{ statusResult.remarks }}</p>
+    </div>
+
+    <button class="back-btn mt-3" (click)="goBack()">Go Back</button>
+  </div>
+  

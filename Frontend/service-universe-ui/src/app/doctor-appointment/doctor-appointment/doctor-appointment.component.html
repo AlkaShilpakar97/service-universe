@@ -1,0 +1,39 @@
+<div class="doctor-search-container">
+    <img src="../assets/images/doctor-appointment.jpg" alt="">
+    <h2>Find a Doctor</h2>
+    <p class="subtitle">Search doctors by name, specialty, or hospital/clinic</p>
+  
+    <form (ngSubmit)="searchDoctors()" [formGroup]="searchForm" class="search-form">
+      <div class="form-group">
+        <label for="name">Doctor Name</label>
+        <input id="name" type="text" formControlName="name" placeholder="Enter doctor name" />
+      </div>
+  
+      <div class="form-group">
+        <label for="specialty">Specialty</label>
+        <select id="specialty" formControlName="specialty">
+          <option value="">--Select Specialty--</option>
+          <option *ngFor="let s of specialties" [value]="s">{{s}}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="hospital">Hospital/Clinic</label>
+        <input id="hospital" type="text" formControlName="hospital" placeholder="Enter hospital name" />
+      </div>
+  
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+  
+    <div *ngIf="doctorsList.length > 0" class="doctor-results">
+      <h3>Search Results:</h3>
+      <div *ngFor="let doctor of doctorsList" class="doctor-card">
+        <h4>{{doctor.name}}</h4>
+        <p>Specialty: {{doctor.specialty}}</p>
+        <p>Hospital: {{doctor.hospital}}</p>
+        <p>Available Timings: {{doctor.available_slots}}</p>
+        <button (click)="navigateToSlots(doctor.id)">View Slots</button>
+      </div>
+    </div>
+  </div>
+  

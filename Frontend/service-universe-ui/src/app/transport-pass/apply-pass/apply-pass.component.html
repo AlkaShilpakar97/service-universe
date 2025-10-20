@@ -1,0 +1,88 @@
+<div class="transport-container">
+    <img src="../assets/images/transport-pass.jpg" alt="">
+
+    <h2>Public Transport Pass Application</h2>
+    <div *ngIf="!submitted">
+    <p class="subtitle">Apply for a new travel pass and enjoy seamless commuting.</p>
+  
+    <form [formGroup]="passForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data" class="pass-form">
+      <div class="form-row">
+        <label for="fullName">Full Name:</label>
+        <input id="fullName" formControlName="fullName" type="text" required />
+      </div>
+  
+      <div class="form-row">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email" required />
+      </div>
+  
+      <div class="form-row">
+        <label for="address">Address:</label>
+        <input id="address" formControlName="address" type="text" required />
+      </div>
+  
+      <div class="form-row">
+        <label for="passType">Pass Type:</label>
+        <select id="passType" formControlName="passType" required>
+          <option value="">-- Select --</option>
+          <option value="monthly">Monthly Pass</option>
+          <option value="quarterly">Quarterly Pass</option>
+          <option value="annual">Annual Pass</option>
+        </select>
+      </div>
+  
+      <div class="form-row">
+        <label for="startDate">Start Date:</label>
+        <input id="startDate" formControlName="startDate" type="date" required />
+      </div>
+  
+      <div class="form-row">
+        <label for="idProof">Upload ID Proof:</label>
+        <input id="idProof" type="file" (change)="onFileChange($event)" />
+      </div>
+      <!-- 💳 Payment Section -->
+    <h3 class="payment-heading">Payment Details</h3>
+
+    <div class="form-row">
+      <label for="paymentMethod">Payment Method:</label>
+      <select id="paymentMethod" formControlName="paymentMethod" required>
+        <option value="">-- Select Method --</option>
+        <option value="credit_card">Credit Card</option>
+        <option value="debit_card">Debit Card</option>
+        <option value="wallet">Online Wallet</option>
+      </select>
+    </div>
+
+    <div *ngIf="passForm.value.paymentMethod === 'credit_card' || passForm.value.paymentMethod === 'debit_card'">
+      <div class="form-row">
+        <label for="cardNumber">Card Number:</label>
+        <input id="cardNumber" formControlName="cardNumber" type="text" placeholder="XXXX-XXXX-XXXX-XXXX" />
+      </div>
+
+      <div class="form-row">
+        <label for="expiryDate">Expiry Date:</label>
+        <input id="expiryDate" formControlName="expiryDate" placeholder="MM/YY" />
+      </div>
+
+      <div class="form-row">
+        <label for="cvv">CVV:</label>
+        <input id="cvv" formControlName="cvv" type="password" maxlength="3" />
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="passForm.invalid" class="submit-btn">
+      Submit & Pay
+    </button>
+  </form>
+</div>
+
+  <div *ngIf="submitted" class="confirmation">
+    <h3>✅ Application Submitted Successfully!</h3>
+    <p>Your application for a <strong>{{ passForm.value.passType }}</strong> pass has been received.</p>
+    <p>We will review your submission and notify you via email.</p>
+    <button class="back-btn mt-3" (click)="goBack()">Go Back</button>
+  </div>
+
+
+  </div>
+  

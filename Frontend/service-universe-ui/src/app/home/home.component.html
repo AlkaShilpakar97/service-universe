@@ -1,0 +1,41 @@
+<section class="welcome">
+    <h2>Welcome to ServiceUniverse</h2>
+    <p>Access government services from one place easily and securely.</p>
+  </section>
+<section class="sign-in" *ngIf="!isLoggedIn">
+    <div class="signin-container">
+      <p class="subtitle">Sign in to continue to ServiceUniverse</p>
+    
+      <form class="signin-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Enter your email" required />
+        </div>
+    
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter your password" required />
+        </div>
+    
+        <button type="submit" class="signin-btn" (click)="signIn()">Sign In</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="services" *ngIf="isLoggedIn">
+    <div class="service-card" (click)="navigateTo('education')">
+      <img src="../assets/images/education.jpg" alt="">
+      <h3>Education</h3>
+      <p>Enroll your children in schools seamlessly through our online portal.</p>
+    </div>
+    <div class="service-card" (click)="navigateTo('doctor/appointments')">
+      <img src="../assets/images/health.jpg" alt="">
+      <h3>Health</h3>
+      <p>Book doctor appointments and access your personal health records.</p>
+    </div>
+    <div class="service-card" (click)="navigateTo('transport/pass')">
+      <img src="../assets/images/transportation.jpg" alt="">
+      <h3>Transportation</h3>
+      <p>Apply for or renew your public transport passes quickly and easily.</p>
+    </div>
+  </section>

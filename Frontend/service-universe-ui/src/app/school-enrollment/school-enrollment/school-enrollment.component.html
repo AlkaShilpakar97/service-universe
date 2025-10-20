@@ -1,0 +1,66 @@
+<div class="enroll-container" >
+  <div *ngIf="!submitted">
+    <h2>New Enrollment Application</h2>
+    <p class="subtitle">Fill in your child’s details and submit the application</p>
+    <hr class="form-divider">
+  
+    <form class="enroll-form" (ngSubmit)="submitEnrollment()" [formGroup]="enrollForm" enctype="multipart/form-data">
+      
+      <div class="form-group">
+        <label for="studentName">Student Full Name</label>
+        <input id="studentName" type="text" formControlName="studentName" placeholder="Enter student’s full name" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input id="dob" type="date" formControlName="dob" required />
+      </div>
+
+      <div class="form-group">
+        <label for="school">Select School</label>
+        <select id="school" formControlName="school" required>
+          <option value="">--Choose a School--</option>
+          <option *ngFor="let s of schools" [value]="s.id">{{ s.name }}</option>
+        </select>
+      </div>       
+  
+      <div class="form-group">
+        <label for="grade">Grade Applying For</label>
+        <select id="grade" formControlName="grade" required>
+          <option value="">Select Grade</option>
+          <option *ngFor="let g of grades" [value]="g">Grade {{g}}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="guardianName">Guardian Name</label>
+        <input id="guardianName" type="text" formControlName="guardianName" placeholder="Enter guardian’s name" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input id="contact" type="tel" formControlName="contact" placeholder="Enter contact number" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" formControlName="address" rows="3" placeholder="Enter full address" required></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="documents">Upload Supporting Documents</label>
+        <input id="documents" type="file" formControlName="documents" multiple required />
+      </div>
+  
+      <button type="submit" class="enroll-btn" [disabled]="!enrollForm.valid">Submit Application</button>
+    </form>
+  </div>
+   
+  <div *ngIf="submitted" class="confirmation-message">
+    <p>{{ responseMessage }}</p>
+    <h3 class="pb-5">Your application id is {{newEnrollment.id}}</h3>
+    <button class="enroll-btn" (click)="submitNew()">Submit new application</button>
+    <button class="back-btn mt-3" (click)="goBack()">Go Back</button>
+  </div>  
+  </div>
+  
