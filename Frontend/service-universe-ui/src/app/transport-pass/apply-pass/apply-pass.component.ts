@@ -55,7 +55,7 @@ export class ApplyPassComponent {
         payment_status: 'Pending'
       };
 
-      this.http.post('http://localhost:5000/transport/', payload)
+      this.http.post('http://localhost:5001/transport/', payload)
         .subscribe({
           next: (res: any) => {
             this.paymentStatus = 'Transport Pass Application Submitted Successfully!';

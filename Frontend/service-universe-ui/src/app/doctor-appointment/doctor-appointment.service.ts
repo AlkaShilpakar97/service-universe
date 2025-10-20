@@ -31,7 +31,7 @@ interface Doctor {
   providedIn: 'root'
 })
 export class DoctorAppointmentService {
-  private apiUrl = 'http://localhost:5000/appointments'; // your FastAPI base URL
+  private apiUrl = 'http://localhost:5002/appointments'; // your FastAPI base URL
 
   constructor(private http: HttpClient) {}
 
@@ -58,7 +58,7 @@ export class DoctorAppointmentService {
 
   // Doctors
   getDoctors(): Observable<Doctor[]> {
-    return this.http.get<Doctor[]>("http://localhost:5000/doctors/");
+    return this.http.get<Doctor[]>("http://localhost:5002/doctors/");
   }
 
   createDoctor(doctor: Omit<Doctor, 'id'>): Observable<Doctor> {

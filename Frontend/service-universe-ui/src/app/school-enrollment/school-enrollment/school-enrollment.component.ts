@@ -19,7 +19,7 @@ export class SchoolEnrollmentComponent implements OnInit {
   responseMessage = '';
   newEnrollment: any = null;
 
-  private baseUrl = 'http://localhost:5000/schools';
+  private baseUrl = 'http://localhost:5003/schools';
 
   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
 

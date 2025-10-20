@@ -1,4 +1,5 @@
 services:
+
   db:
     image: postgres:15
     container_name: db
@@ -16,29 +17,35 @@ services:
       timeout: 5s
       retries: 5
 
-  backend:
-    build: .
-    ports:
-      - "5000:5000"
-    environment:
-      DATABASE_URL: postgresql+psycopg2://postgres:postgres@db:5432/service_universe_db
-    depends_on:
-      db:
-        condition: service_healthy
+  # backend-transport:
+  #   build: ./transport-service
+  #   ports:
+  #     - "5001:5000"  # Host:Container
+  #   depends_on:
+  #     - db
 
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin
-    restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: admin123
+  backend-doctor:
+    build: ./doctor-service
     ports:
-      - "5050:80"
+      - "5002:5000"
     depends_on:
       - db
-    volumes:
-      - pgadmin_data:/var/lib/pgadmin
+
+  # backend-school:
+  #   build: ./school-service
+  #   ports:
+  #     - "5003:5000"
+  #   depends_on:
+  #     - db
+
+  # gateway:
+  #   build: ./gateway-service
+  #   ports:
+  #     - "5000:5000"
+  #   depends_on:
+  #     - backend-transport
+  #     - backend-doctor
+  #     - backend-school
 
 volumes:
   db_data:
