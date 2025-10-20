@@ -1,0 +1,12 @@
+fastapi==0.109.1
+uvicorn[standard]==0.23.2
+sqlalchemy
+psycopg2-binary
+pydantic==2.5.2
+python-multipart==0.0.6
+aiofiles==23.1.0
+fastapi-admin[sqlalchemy]
+jinja2
+aiofiles
+pydantic[email]
+
