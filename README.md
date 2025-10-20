@@ -3,9 +3,9 @@
 ## Service List
 
 * **gateway_app** – Gateway and Authentication service
-* **transport_app** – Transport Pass service
-* **doctor_app** – Doctor Appointment service
-* **school_app** – School Enrollment service
+* **transport_app** – Transport Pass service(default port: 5001)
+* **doctor_app** – Doctor Appointment service(default port: 5002)
+* **school_app** – School Enrollment service(default port: 5003)
 
 ---
 
