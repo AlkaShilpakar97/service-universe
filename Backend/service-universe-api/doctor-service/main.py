@@ -35,4 +35,4 @@ app.include_router(doctors.router)
 # Root route for testing
 @app.get("/")
 def root():
-    return {"message": "Service Universe API is running"}
+    return {"message": "Doctor Appointment Service API is running"}
